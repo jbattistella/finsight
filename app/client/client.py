@@ -1,7 +1,26 @@
+import argparse 
+import os
+
 import databento as db
 from datetime import datetime
 
 now = datetime.now()
+
+
+class ClientConfigs:
+    def __init__(self):
+        parser = argparse.ArguementParser()
+        parser.add_argument("-c", "--config", type=str, default="test-config")
+        self.args = parser.parse_args()
+
+
+def ArguementParser():
+
+    parser = ArguementParser()
+    parser.add_argument("-c", "--config", type=str)
+    args = parser.parse_args()
+
+
 
 def download_data():
 
